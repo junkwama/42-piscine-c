@@ -148,6 +148,8 @@ Replace <filename> with the name of the file you want to test.
 
 The file command will use the ft_magic file to determine if the file is of the 42 file type. If the file contains the string "42" at either the beginning or the 42nd byte, the command will output "File is of type 42". Otherwise, it will output the default file type detection information.c
 
-Chmod rwx 421
+#Chmod rwx 421
+
+
 
 
