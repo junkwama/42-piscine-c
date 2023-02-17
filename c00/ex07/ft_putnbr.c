@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/17 11:37:44 by junkwama          #+#    #+#             */
+/*   Updated: 2023/02/17 12:00:45 by junkwama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -7,13 +19,12 @@ void	ft_putchar(char c)
 
 int	ft_reverse_number(int n)
 {
-	int given_number;
-	int output;
-	int to_add;
+	int	given_number;
+	int	output;
+	int	to_add;
 
 	given_number = n;
 	output = 0;
-
 	while (given_number > 0)
 	{
 		to_add = given_number % 10;
@@ -21,23 +32,22 @@ int	ft_reverse_number(int n)
 		given_number = given_number / 10;
 	}
 	{
-		return output;
+		return (output);
 	}
 }
 
 void	ft_putnbr(int n)
 {
-	
-	int reversed_number;
-	reversed_number = ft_reverse_number(n);
+	int	reversed_number;
+	int	to_print;
 
+	reversed_number = ft_reverse_number(n);
 	if (reversed_number == 0)
 	{
 		ft_putchar(48);
 	}
 	else
 	{
-		int to_print;
 		while (reversed_number > 0)
 		{
 			to_print = reversed_number % 10;

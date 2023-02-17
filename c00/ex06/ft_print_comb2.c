@@ -7,9 +7,11 @@ void	ft_putchar(char c)
 
 void	ft_print_number(char c)
 {
-	int x2;
-	int x1;
+	int	x2;
+	int	x1;
+	int	is_first_line;
 
+	is_first_line = 1;
 	x1 = (i * 10) + j;
 	x2 = (k * 10) + l;
 	
@@ -31,20 +33,18 @@ void	ft_print_number(char c)
 
 void	ft_print_comb()
 {
-	int n;
-	int i;
-	int j;
-	int k;
-	int l;
-
-	int is_first_line = 1;
+	int	n;
+	int	i;
+	int	j;
+	int	k;
+	int	l;
 
 	n = 48;
 	i = 0;
 	j = 0;
 	k = 0;
 	l = 0;
-	
+
 	while (i < 10)
 	{
 	    j = 0;
