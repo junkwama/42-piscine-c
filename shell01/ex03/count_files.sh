@@ -1,1 +1,6 @@
-find . -type d -o -type f | wc -l | sed 's/[[:space:]]*//'
+nb=0
+for fichier in `find .`
+do
+	nb=`expr $nb + 1`
+done
+echo $nb
