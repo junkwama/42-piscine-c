@@ -6,10 +6,9 @@
 /*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 08:06:01 by junkwama          #+#    #+#             */
-/*   Updated: 2023/02/16 08:07:55 by junkwama         ###   ########.fr       */
+/*   Updated: 2023/02/18 09:13:59 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putchar(char c)

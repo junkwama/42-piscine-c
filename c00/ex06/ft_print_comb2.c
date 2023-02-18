@@ -1,68 +1,75 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: junkwama <junkwama@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/18 15:52:29 by junkwama          #+#    #+#             */
+/*   Updated: 2023/02/18 15:53:53 by junkwama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_print_number(char c)
+void	ft_retrieve_nbr(int i1, int i2, int i[])
 {
-	int	x2;
-	int	x1;
-	int	is_first_line;
-
-	is_first_line = 1;
-	x1 = (i * 10) + j;
-	x2 = (k * 10) + l;
-	
-	if (!((i == k) && (j == l)) && (x2 > x1))
+	if (i1 >= 10)
 	{
-		if (is_first_line != 1)
-		{
-			ft_putchar(',');
-			ft_putchar(' ');
-		}
-		ft_putchar(i + n);
-		ft_putchar(j + n);
-		ft_putchar(' ');
-		ft_putchar(k + n);
-		ft_putchar(l + n);
-		is_first_line = 0;
+		i[0] = i1 / 10;
+		i[1] = i1 - 10 * i[0];
+	}
+	else
+	{
+		i[0] = 0;
+		i[1] = i1;
+	}
+	if (i2 >= 10)
+	{
+		i[2] = i2 / 10;
+		i[3] = i2 - 10 * i[2];
+	}
+	else
+	{
+		i[2] = 0;
+		i[3] = i2;
 	}
 }
 
-void	ft_print_comb()
+void	ft_putchar_multiple(int i1, int i2)
 {
-	int	n;
-	int	i;
-	int	j;
-	int	k;
-	int	l;
+	int	i[4];
 
-	n = 48;
-	i = 0;
-	j = 0;
-	k = 0;
-	l = 0;
-
-	while (i < 10)
+	ft_retrieve_nbr(i1, i2, i);
+	ft_putchar(i[0] + 48);
+	ft_putchar(i[1] + 48);
+	ft_putchar(' ');
+	ft_putchar(i[2] + 48);
+	ft_putchar(i[3] + 48);
+	if (i1 != 98 || i2 != 99)
 	{
-	    j = 0;
-		while (j < 10)
+		ft_putchar(',');
+		ft_putchar(' ');
+	}
+}
+
+void	ft_print_comb2(void)
+{
+	int	i1;
+	int	i2;
+
+	i1 = 0;
+	while (i1 <= 98)
+	{
+		i2 = i1 + 1;
+		while (i2 <= 99)
 		{
-		    k = 0;
-			while (k < 10)
-			{
-				l = 0;
-				while (l < 10)
-				{
-					ft_print_number(i, j, k, l);
-					l++;
-				}
-				k++;
-			}
-			j++;
+			ft_putchar_multiple(i1, i2);
+			i2++;
 		}
-		i++;
+		i1++;
 	}
 }
