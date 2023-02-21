@@ -1,14 +1,10 @@
 #include <stdio.h>
-#include "ft_strcpy.c"
-
-int	main ()
+#include "ft_strupcase.c"
+int main ()
 {
-	char src[6] = "hello";
-	char dest[6];
+    char src[11] = "xzxA434_z";
+    ft_strupcase(src);
 
-	ft_strcpy(dest, src);
-	printf("%s", dest);
-
-	return (0);
+    printf("%s", src);
+    return (0);
 }
-

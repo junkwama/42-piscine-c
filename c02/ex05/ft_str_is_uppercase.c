@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 01:54:31 by junkwama          #+#    #+#             */
-/*   Updated: 2023/02/21 02:02:52 by junkwama         ###   ########.fr       */
+/*   Created: 2023/02/21 02:07:59 by junkwama          #+#    #+#             */
+/*   Updated: 2023/02/21 02:08:04 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 	int	c;
@@ -21,7 +21,7 @@ int	ft_str_is_lowercase(char *str)
 	while (*(str + i) != '\0')
 	{
 		c = (int)(*(str + i));
-		if (!((c >= 97) && (c <= 122)))
+		if (!((c >= 65) && (c <= 90)))
 		{
 			ret_val = 0;
 			break ;
